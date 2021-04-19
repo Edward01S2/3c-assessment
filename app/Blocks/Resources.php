@@ -219,6 +219,7 @@ class Resources extends Block
                 'image' => get_the_post_thumbnail_url(),
                 'link' => get_field('link', $id),
                 'logo' => get_field('logo', $id),
+                'uni' => get_field('3CU?', $id),
                 'tags' => $tags,
             ];
 

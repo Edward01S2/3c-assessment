@@ -32,6 +32,7 @@ class Post extends Field
                     'advanced' => 'Advanced',
                 ],
             ])
+            ->addTrueFalse('3CU?')
             ->addLink('link')
             // ->addText('location', [
             //     'instructions' => 'Use only with category "Success"'
