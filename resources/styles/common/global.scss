@@ -1,0 +1,21 @@
+body {
+  @apply font-open text-c-blue-300;
+}
+
+[x-cloak] {
+  @apply hidden;
+}
+
+.page.result {
+  @apply bg-c-gray-100;
+}
+
+.img-shadow {
+  filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.1));
+}
+
+.prose {
+  strong {
+    @apply text-c-blue-200 #{!important};
+  }
+}

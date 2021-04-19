@@ -1,0 +1,241 @@
+.gfield {
+  @apply mb-4 md:w-full;
+  input, select, textarea {
+    @apply w-full bg-white;
+  }
+  &.gfield_error {
+    input, select, textarea {
+      @apply border-2 border-red-500;
+    }
+  }
+  textarea {
+    @apply h-40;
+  }
+}
+
+.hidden_label label{
+  @apply hidden;
+}
+
+.gfield_visibility_hidden {
+  @apply hidden;
+}
+.validation_message {
+  @apply hidden;
+}
+.validation_error {
+  @apply text-red-500 px-0 mb-4 md:mb-4;
+}
+.gform_footer {
+  @apply md:flex md:justify-end;
+  .gform_button {
+    @apply text-white py-4 uppercase font-extrabold tracking-widest w-full cursor-pointer transition duration-150;
+  }
+}
+.gfield_required {
+  @apply hidden;
+}
+
+.gform_validation_container {
+  @apply hidden;
+}
+
+.gform_ajax_spinner {
+  @apply hidden;
+}
+
+.survey {
+  .gform_wrapper {
+    @apply text-c-blue-200;
+    .gfield_label {
+      @apply font-bold text-xl mb-4 block xl:mb-8 2xl:text-2xl;
+    }
+    .gfield_radio {
+      li {
+        @apply flex mb-3;
+        input {
+          @apply w-4 h-4 mt-1 border-c-blue-200 border-2 mr-3 bg-transparent xl:mt-1.5 cursor-pointer;
+        }
+        label {
+          @apply xl:text-lg cursor-pointer;
+        }
+      }
+    }
+    textarea {
+      @apply rounded-md border-gray-400;
+    }
+    .gfield_checkbox {
+      .survey-heading {
+        @apply font-bold text-xl my-4 block xl:my-6 2xl:text-2xl;
+      }
+      li {
+        @apply flex mb-3;
+        input {
+          @apply w-4 h-4 mt-1 border-c-blue-200 border-2 mr-3 bg-transparent xl:mt-1.5 cursor-pointer;
+        }
+        label {
+          @apply xl:text-lg cursor-pointer;
+        }
+      }
+    }
+    .gfield_select {
+      @apply rounded-md border-gray-300 cursor-pointer py-2.5;
+    }
+    .ginput_container_select {
+      @apply cursor-pointer lg:max-w-xs;
+    }
+
+
+    #gform_page_3_4 {
+      .ginput_container_radio {
+        @apply mb-4;
+      }
+      #gfield_description_3_24 {
+        @apply italic text-sm lg:text-base text-c-blue-300;
+      }
+      .gfield_radio {
+        @apply grid grid-cols-10 bg-white rounded-md;
+        input {
+          @apply hidden;
+        }
+        li {
+          @apply mb-0 text-center flex justify-center items-center h-full;
+        }
+        label {
+          @apply h-full w-full text-lg py-2 align-middle border-2 border-transparent;
+        }
+        input:checked + label {
+          @apply border-c-blue-200 border-2 bg-gray-100;
+        }
+        #label_3_24_0 {
+          @apply rounded-l-md;
+        }
+        #label_3_24_9 {
+          @apply rounded-r-md;
+        }
+      }
+    }
+
+    .gfield_error {
+      .gfield_radio, .gfield_checkbox {
+        li {
+          input {
+            @apply border-red-500;
+          }
+        }
+      }
+    }
+
+    .hidden_label label{
+      @apply hidden;
+    }
+    .gform_page_fields {
+      @apply mb-6 md:mb-8 xl:mb-12;
+    }
+    .gform_page_footer {
+      @apply flex justify-between;
+      div:only-child {
+        @apply mx-auto;
+      }
+      .gform_next_container {
+        @apply inline-block relative;
+        input {
+          @apply bg-c-orange-100 text-white rounded-md font-bold uppercase pl-6 pr-12 py-2.5 tracking-wider cursor-pointer focus:ring-offset-transparent focus:ring-0 focus:ring-transparent hover:opacity-75;
+        }
+        &:after {
+          @apply text-white h-5 w-5 absolute right-0 top-0 mr-4 pointer-events-none;
+          margin-top: 0.75rem;
+          content: '';
+          background-size: 100% 100%;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        }
+      }
+      .gform_prev_container {
+        @apply inline-block relative;
+        input {
+          @apply bg-white text-c-orange-100 border border-c-orange-100 rounded-md font-bold uppercase pr-6 pl-12 py-2.5 tracking-wider cursor-pointer focus:ring-offset-transparent focus:ring-0 focus:ring-transparent hover:bg-c-orange-100 hover:text-white;
+        }
+        &:before {
+          @apply text-c-orange-100 h-5 w-5 absolute left-0 top-0 ml-4 fill-current pointer-events-none;
+          margin-top: 0.75rem;
+          content: '';
+          background-size: 100% 100%;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23E59C68'%3E%3Cpath fill-rule='evenodd' d='M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+        }
+        &:hover {
+          &:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z' clip-rule='evenodd' /%3E%3C/svg%3E");
+          }
+        }
+      }  
+    }
+    #gform_page_1_5 {
+      .gform_next_container {
+        input {
+          @apply px-6;
+        }
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  [type='radio']:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='5.5' stroke='white' stroke-width='3' fill='%23194198' /%3E%3C/svg%3E");
+  }
+  [type='radio']:focus {
+    @apply ring-transparent ring-0 ring-offset-transparent;
+  }
+  [type='checkbox']:checked {
+    @apply bg-c-blue-200 #{!important}; 
+  }
+  [type='checkbox']:focus {
+    @apply ring-transparent ring-0 ring-offset-transparent;
+  } 
+
+  .hidden_label label{
+    @apply hidden;
+  }
+  .progress-bar {
+    @apply bg-gray-500 w-full relative overflow-hidden rounded-full;
+    height: 7px;
+    .progress-20 {
+      @apply absolute bg-c-orange-100 w-1/5 z-30 top-0;
+      height: 7px;
+    }
+    .progress-40 {
+      @apply absolute bg-c-orange-100 w-2/5 z-30 top-0;
+      height: 7px;
+    }
+    .progress-60 {
+      @apply absolute bg-c-orange-100 w-3/5 z-30 top-0;
+      height: 7px;
+    }
+    .progress-80 {
+      @apply absolute bg-c-orange-100 w-4/5 z-30 top-0;
+      height: 7px;
+    }
+    .progress-100 {
+      @apply absolute bg-c-orange-100 w-full z-30 top-0;
+      height: 7px;
+    }
+  }
+}
+
+.cu-form {
+  .gform_wrapper {
+    @apply text-left text-c-blue-200;
+    .gfield {
+      input {
+        @apply border-[#C4C4C4] rounded;
+      }
+    }
+    .gform_footer {
+      @apply text-center md:justify-center;
+      .gform_button {
+        @apply w-auto bg-c-orange-100 text-sm px-6 rounded hover:opacity-60 hover:shadow;
+      }
+    }
+  }
+}
