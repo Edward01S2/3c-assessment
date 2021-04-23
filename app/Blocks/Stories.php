@@ -158,11 +158,19 @@ class Stories extends Block
     }
 
     public function getStories() {
+
+        $industry = (isset($_GET['industry']) || !(empty($_GET['industry']))) ? $_GET['industry'] : 'other';
+
         $args = array(
             'post_type' => 'story',
             'post_status' => 'publish',
             'posts_per_page' => '-1',
         );
+
+        if($industry) {
+            $args['meta_key'] = 'industry';
+            $args['meta_value'] = $industry;
+        }
 
         $posts = new \WP_Query($args);
 

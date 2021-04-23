@@ -20,6 +20,18 @@ class Story extends Field
             ->setLocation('post_type', '==', 'story');
 
         $story
+            ->addSelect('industry', [
+                'choices' => [
+                    'travel' => 'Travel',
+                    'art' => 'Art',
+                    'retail' => 'Retail',
+                    'services' => 'Services',
+                    'manufacturing' => 'Manufacturing',
+                    'food-services' => 'Food Services',
+                    'healthcare' => 'Healthcare',
+                    'other' => 'Other'
+                ],
+            ])
             ->addText('location')
             ->addTextarea('excerpt')
             ->addText('link');

@@ -1,3 +1,4 @@
+@if($stories)
 <div class="{{ $block->classes }}">
   <div class="my-12 overflow-hidden md:mb-24">
     <div class="container max-w-6xl px-6 mx-auto lg:px-8">
@@ -51,3 +52,4 @@
     </div>
   </div>
 </div>
+@endif
