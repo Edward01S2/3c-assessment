@@ -168,8 +168,16 @@ class Stories extends Block
         );
 
         if($industry) {
-            $args['meta_key'] = 'industry';
-            $args['meta_value'] = $industry;
+            // $args['meta_key'] = 'industry';
+            // $args['meta_value'] = $industry;
+            $args['meta_query'] = [
+                'relation' => 'AND',
+                [
+                    'key' => 'industry',
+                    'value' => '"'.$industry.'"',
+                    'compare' => 'LIKE'
+                ]
+            ];
         }
 
         $posts = new \WP_Query($args);

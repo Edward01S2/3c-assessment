@@ -31,6 +31,7 @@ class Story extends Field
                     'healthcare' => 'Healthcare',
                     'other' => 'Other'
                 ],
+                'multiple' => 1,
             ])
             ->addText('location')
             ->addTextarea('excerpt')
