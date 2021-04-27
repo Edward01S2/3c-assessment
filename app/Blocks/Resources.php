@@ -208,7 +208,8 @@ class Resources extends Block
             $posttags = get_the_tags();
             
             if($posttags) { 
-                $tags = implode(' ', wp_list_pluck($posttags, 'name')); 
+                $tags = implode(' ', wp_list_pluck($posttags, 'name'));
+                $data['tags'] = $tags;
             }
 
             //return $term;
@@ -220,8 +221,9 @@ class Resources extends Block
                 'link' => get_field('link', $id),
                 'logo' => get_field('logo', $id),
                 'uni' => get_field('3CU?', $id),
-                'tags' => $tags,
             ];
+
+
 
         endwhile;
         wp_reset_query();
