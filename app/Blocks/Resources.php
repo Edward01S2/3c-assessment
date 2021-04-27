@@ -203,17 +203,17 @@ class Resources extends Block
             }
         }
 
-        switch($lvl) {
+        switch($level) {
             case 1 : {
-                $lvl = 'beginner';
+                $level = 'beginner';
                 break;
             }
             case 2 : {
-                $lvl = 'intermediate';
+                $level = 'intermediate';
                 break;
             }
             case 3 : {
-                $lvl = 'advanced';
+                $level = 'advanced';
                 break;
             }
         }
