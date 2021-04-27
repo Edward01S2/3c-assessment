@@ -32,7 +32,11 @@
 
   <div class="my-12 overflow-hidden">
     <div class="container max-w-6xl px-6 mx-auto lg:px-8">
-      <p class="font-bold text-center md:text-lg xl:text-xl">{!! $stats_title !!}</p>
+      @if($ind == 'Other')
+        <p class="font-bold text-center md:text-lg xl:text-xl">Here’s what other SMBs think about digital tools:</p>
+      @else
+        <p class="font-bold text-center md:text-lg xl:text-xl">Here’s what other SMBs in the {!! $ind !!} industry think about digital tools:</p>
+      @endif
     </div>
     <div class="mt-6 md:container md:px-6 lg:px-8 md:mx-auto md:max-w-6xl xl:mt-8">
       <div class="overflow-visible swiper-container stats-slider">

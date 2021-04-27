@@ -144,6 +144,7 @@ class Stats extends Block
             'logo' => get_field('Logo', 'options'),
             'title' => get_field('title'),
             'score' => $this->score(),
+            'ind' => $this->getInd(),
         ];
     }
 
@@ -202,6 +203,45 @@ class Stats extends Block
             }
         }
 
+    }
+
+    public function getInd() {
+        $industry = (isset($_GET['ind']) || !(empty($_GET['ind']))) ? $_GET['ind'] : 'other';
+
+        switch($industry) {
+            case 'other': {
+                return 'Other';
+                break;
+            }
+            case 'travel': {
+                return 'Travel';
+                break;
+            }
+            case 'art': {
+                return 'Art';
+                break;
+            }
+            case 'retail': {
+                return 'Retail';
+                break;
+            }
+            case 'services': {
+                return 'Services';
+                break;
+            }
+            case 'manufacturing': {
+                return 'Manufacturing';
+                break;
+            }
+            case 'food-services': {
+                return 'Food Services';
+                break;
+            }
+            case 'healthcare': {
+                return 'Healthcare';
+                break;
+            }
+        }
     }
 
     public function score()
