@@ -45,7 +45,9 @@
                 <img class="object-cover object-center w-full h-full" src="{!! $item['image'] !!}" alt="">
               </div>
               <div class="flex-grow p-4 pb-0">
-                <div class="text-sm uppercase text-c-blue-100">{!! $item['tags'] !!}</div>
+                @if($item['tags'])
+                  <div class="text-sm uppercase text-c-blue-100">{!! $item['tags'] !!}</div>
+                @endif
                 <h3 class="my-2 text-xl font-semibold text-c-blue-400 xl:text-2xl">{!! $item['title'] !!}</h3>
                 <p class="text-c-blue-200">{!! $item['excerpt'] !!}</p>
               </div>
