@@ -178,7 +178,7 @@ class Resources extends Block
 
     public function getPosts() {
         $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwg';
-        $level = (isset($_GET['lvl']) || !(empty($_GET['lvl']))) ? $_GET['lvl'] : 'beginner';
+        $level = (isset($_GET['lvl']) || !(empty($_GET['lvl']))) ? $_GET['lvl'] : '1';
 
         switch($content) {
             case 'so' : {
@@ -199,6 +199,21 @@ class Resources extends Block
             }
             case 'wr' : {
                 $content = 'work-remotely';
+                break;
+            }
+        }
+
+        switch($lvl) {
+            case 1 : {
+                $lvl = 'beginner';
+                break;
+            }
+            case 2 : {
+                $lvl = 'intermediate';
+                break;
+            }
+            case 3 : {
+                $lvl = 'advanced';
                 break;
             }
         }
