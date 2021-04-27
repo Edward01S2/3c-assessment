@@ -57,6 +57,12 @@ add_action('gform_pre_submission_3', function($form) {
     $_POST['input_28'] = $score;
   }
 
+  if($qind = rgpost('input_26')) {
+    if($qind == 'none') {
+      $_POST['input_26'] = 'other';
+    }
+  }
+
   //$q4 = \GFAPI::get_field( $form, 23 );
 
   if($q4 = \GFAPI::get_field( $form, 23 ) ) {
