@@ -159,7 +159,7 @@ class Stories extends Block
 
     public function getStories() {
 
-        $industry = (isset($_GET['industry']) || !(empty($_GET['industry']))) ? $_GET['industry'] : 'other';
+        $industry = (isset($_GET['ind']) || !(empty($_GET['ind']))) ? $_GET['ind'] : 'other';
 
         $args = array(
             'post_type' => 'story',

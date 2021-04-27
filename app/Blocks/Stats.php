@@ -191,7 +191,7 @@ class Stats extends Block
     }
 
     public function stats() {
-        $industry = (isset($_GET['industry']) || !(empty($_GET['industry']))) ? $_GET['industry'] : 'other';
+        $industry = (isset($_GET['ind']) || !(empty($_GET['ind']))) ? $_GET['ind'] : 'other';
 
         $stats = get_field('stats');
 
@@ -205,7 +205,7 @@ class Stats extends Block
 
     public function score()
     {
-        $score = (isset($_GET['score']) || !(empty($_GET['score']))) ? $_GET['score'] : 0;
+        $score = (isset($_GET['sc']) || !(empty($_GET['sc']))) ? $_GET['sc'] : 0;
 
         if($score <= 4) {
             $width = 14.3;

@@ -170,15 +170,38 @@ class Resources extends Block
     }
 
     public function getContent() {
-        $content = (isset($_GET['content']) || !(empty($_GET['content']))) ? $_GET['content'] : 'sell-online';
-
+        $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwg';
+        
+            
         return $content;
     }
 
     public function getPosts() {
-        $content = (isset($_GET['content']) || !(empty($_GET['content']))) ? $_GET['content'] : 'sell-online';
-        $level = (isset($_GET['level']) || !(empty($_GET['level']))) ? $_GET['level'] : 'beginner';
+        $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwg';
+        $level = (isset($_GET['lvl']) || !(empty($_GET['lvl']))) ? $_GET['lvl'] : 'beginner';
 
+        switch($content) {
+            case 'so' : {
+                $content = 'sell-online';
+                break;
+            }
+            case 'gwg' : {
+                $content = 'grow-with-google';
+                break;
+            }
+            case 'rmc' : {
+                $content = 'reach-more-customers';
+                break;
+            }
+            case 'fo' : {
+                $content = 'found-online';
+                break;
+            }
+            case 'wr' : {
+                $content = 'work-remotely';
+                break;
+            }
+        }
 
         $args = array(
             'post_type' => 'post',
@@ -209,7 +232,6 @@ class Resources extends Block
             
             if($posttags) { 
                 $tags = implode(' ', wp_list_pluck($posttags, 'name'));
-                $data['tags'] = $tags;
             }
 
             //return $term;
@@ -221,6 +243,7 @@ class Resources extends Block
                 'link' => get_field('link', $id),
                 'logo' => get_field('logo', $id),
                 'uni' => get_field('3CU?', $id),
+                'tags' => isset($tags) ? $tags : '',
             ];
 
 

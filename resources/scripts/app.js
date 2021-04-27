@@ -126,7 +126,7 @@ $(document).ready(() => {
 
     var searchParams = new URLSearchParams(window.location.search);
 
-    searchParams.set('content', this.value);
+    searchParams.set('con', this.value);
 
     var url = location.protocol + '//' + location.host + location.pathname + '?' + searchParams.toString();
 

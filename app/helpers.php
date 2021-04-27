@@ -16,19 +16,19 @@ add_action('gform_pre_submission_3', function($form) {
   if($q1 = rgpost('input_20')) {
     $q1gw = [1, 2, 6, 8];
     if(in_array($q1, $q1gw)) {
-      $content = 'grow-with-google';
+      $content = 'gwg';
     }
     if($q1 == '5') {
-      $content = 'found-online';
+      $content = 'fo';
     }
     if($q1 == '4') {
-      $content = 'reach-more-customers';
+      $content = 'rmc';
     }
     if($q1 == '3') {
-      $content = 'sell-online';
+      $content = 'so';
     }
     if($q1 == '7') {
-      $content = 'work-remotely';
+      $content = 'wr';
     }
 
     $_POST['input_29'] = $content;
@@ -163,13 +163,13 @@ add_action('gform_pre_submission_3', function($form) {
     $score += $q5;
 
     if($q5 <= 3) { 
-      $level = 'beginner';
+      $level = '1';
     }
     if($q5 > 3 && $q5 <= 7) {
-      $level = 'intermediate';
+      $level = '2';
     }
     if($q5 > 7) {
-      $level = 'advanced';
+      $level = '3';
     }
 
     $_POST['input_30'] = $level;
@@ -213,7 +213,7 @@ add_filter( 'gform_confirmation', function ( $confirmation, $form, $entry ) {
     //error_log( print_r( 'Confirmff: ' . $confirmation, true ) );
 
   $confirmation = array( 'redirect' => '/result' );
-  $confirmation['redirect'] = add_query_arg( array( 'content' => $content, 'industry' => $industry, 'score' => $score, 'level' => $level), $confirmation['redirect'] );
+  $confirmation['redirect'] = add_query_arg( array( 'con' => $content, 'ind' => $industry, 'sc' => $score, 'lvl' => $level), $confirmation['redirect'] );
 
   //   // error_log( print_r( 'Confirm: ' . $confirmation['redirect'], true ) );
   }
