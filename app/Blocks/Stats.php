@@ -165,6 +165,7 @@ class Stats extends Block
             ])
                 ->addSelect('industry', [
                     'choices' => [
+                        'none' => 'None',
                         'travel' => 'Travel',
                         'art' => 'Art',
                         'retail' => 'Retail',
