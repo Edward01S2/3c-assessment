@@ -32,7 +32,7 @@
 
   <div class="my-12 overflow-hidden">
     <div class="container max-w-6xl px-6 mx-auto lg:px-8">
-      @if($ind == 'Other')
+      @if($ind == 'other')
         <p class="font-bold text-center md:text-lg xl:text-xl">Here’s what other SMBs think about digital tools:</p>
       @else
         <p class="font-bold text-center md:text-lg xl:text-xl">Here’s what other SMBs in the {!! $ind !!} industry think about digital tools:</p>

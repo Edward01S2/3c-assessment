@@ -210,35 +210,35 @@ class Stats extends Block
 
         switch($industry) {
             case 'other': {
-                return 'Other';
+                return 'other';
                 break;
             }
             case 'travel': {
-                return 'Travel';
+                return 'travel';
                 break;
             }
             case 'art': {
-                return 'Art';
+                return 'art';
                 break;
             }
             case 'retail': {
-                return 'Retail';
+                return 'retail';
                 break;
             }
             case 'services': {
-                return 'Services';
+                return 'services';
                 break;
             }
             case 'manufacturing': {
-                return 'Manufacturing';
+                return 'manufacturing';
                 break;
             }
             case 'food-services': {
-                return 'Food Services';
+                return 'food services';
                 break;
             }
             case 'healthcare': {
-                return 'Healthcare';
+                return 'healthcare';
                 break;
             }
         }
