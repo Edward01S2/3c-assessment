@@ -10,7 +10,7 @@
             @endif
           @endforeach --}}
           <option value="gwg" <?php if('gwg' == $content) echo ' selected="selected"'; ?>>Grow with Google</option>
-          <option value="fo" <?php if('fo' == $content) echo ' selected="selected"'; ?>>Found Online</option>
+          <option value="fo" <?php if('fo' == $content) echo ' selected="selected"'; ?>>Be Found Online</option>
           <option value="rmc" <?php if('rmc' == $content) echo ' selected="selected"'; ?>>Reach More Customers</option>
           <option value="so" <?php if('so' == $content) echo ' selected="selected"'; ?>>Sell Online</option>
           <option value="wr" <?php if('wr' == $content) echo ' selected="selected"'; ?>>Work Remotely</option>
