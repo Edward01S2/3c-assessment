@@ -218,7 +218,7 @@ class Stats extends Block
                 break;
             }
             case 'art': {
-                return 'art';
+                return 'arts, entertainment, and recreation';
                 break;
             }
             case 'retail': {
