@@ -26,6 +26,19 @@
           <div class="text-center">Digitally<br/>Evolving</div>
           <div class="text-right">Digitally<br/>Advanced</div>
         </div>
+        @if($stats['stat 4'])
+          <div class="grid grid-cols-3 mt-2 font-semibold leading-4 uppercase md:leading-4 sm:text-lg md:mt-4 lg:text-xl xl:text-2xl">
+            <div class="pl-4 text-[#279FB9]">{!! $stats['stat 4'] !!}%</div>
+            <div class="text-center text-[#5A489F]">{!! $stats['stat 5'] !!}%</div>
+            <div class="pr-4 text-right text-[#26A474]">{!! $stats['stat 6'] !!}%</div>
+          </div>
+          <div class="px-6 pt-4 pb-6 md:px-8">
+            <div class="w-full border-l-2 border-r-2 border-b-2 border-[#294071] min-h-[1rem]">
+              <div class="px-4 mx-6 -mb-8 text-xs font-semibold text-center bg-c-gray-100 sm:text-sm sm:max-w-sm sm:mx-auto sm:pt-4 sm:-mb-5 xl:text-base">Distribution of digital adoption levels among small
+                businesses in the {!! $ind !!} industry</div>
+            </div>
+          </div>
+        @endif
       </div>
     </div>
   </div>
