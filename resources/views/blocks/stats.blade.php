@@ -34,8 +34,12 @@
           </div>
           <div class="px-6 pt-4 pb-6 md:px-8">
             <div class="w-full border-l-2 border-r-2 border-b-2 border-[#294071] min-h-[1rem]">
-              <div class="px-4 mx-6 -mb-8 text-xs font-semibold text-center bg-c-gray-100 sm:text-sm sm:max-w-sm sm:mx-auto sm:pt-4 sm:-mb-5 xl:text-base">Distribution of digital adoption levels among small
-                businesses in the {!! $ind !!} industry</div>
+              <div class="px-4 mx-6 -mb-8 text-xs font-semibold text-center bg-c-gray-100 sm:text-sm sm:max-w-sm sm:mx-auto sm:pt-4 sm:-mb-5 xl:text-base">
+                @if($ind == 'other')
+                  Distribution of digital adoption levels among small businesses</div>
+                @else
+                  Distribution of digital adoption levels among small businesses in the {!! $ind !!} industry</div>
+                @endif
             </div>
           </div>
         @endif
