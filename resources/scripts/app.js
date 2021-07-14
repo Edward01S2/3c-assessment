@@ -8,62 +8,80 @@ import Swiper, { Navigation } from 'swiper';
 
 Swiper.use([Navigation]);
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 $(document).ready(() => {
   // console.log('Hello world');
 
-  $(".survey .gform_page_footer").each(function() {
-    $(this).find('.gform_next_button').wrap("<div class='gform_next_container'></div>");
-    $(this).find('.gform_previous_button').wrap("<div class='gform_prev_container'></div>");
-    $(this).find('.gform_button').wrap("<div class='gform_next_container'></div>");
-  //console.log(this);
+  $('.survey .gform_page_footer').each(function () {
+    $(this)
+      .find('.gform_next_button')
+      .wrap("<div class='gform_next_container'></div>");
+    $(this)
+      .find('.gform_previous_button')
+      .wrap("<div class='gform_prev_container'></div>");
+    $(this)
+      .find('.gform_button')
+      .wrap("<div class='gform_next_container'></div>");
+    //console.log(this);
   });
 
-  $(document).on('gform_post_render', function() {
-    $(".survey .gform_page_footer").each(function() {
-      $(this).find('.gform_next_button').wrap("<div class='gform_next_container'></div>");
-      $(this).find('.gform_previous_button').wrap("<div class='gform_prev_container'></div>");
-      $(this).find('.gform_button').wrap("<div class='gform_next_container'></div>");
-    //console.log(this);
+  $(document).on('gform_post_render', function () {
+    $('.survey .gform_page_footer').each(function () {
+      $(this)
+        .find('.gform_next_button')
+        .wrap("<div class='gform_next_container'></div>");
+      $(this)
+        .find('.gform_previous_button')
+        .wrap("<div class='gform_prev_container'></div>");
+      $(this)
+        .find('.gform_button')
+        .wrap("<div class='gform_next_container'></div>");
+      //console.log(this);
     });
   });
 
   //console.log(surveyImages);
-  $(document).on('gform_page_loaded', function(event, form_id, current_page){
+  $(document).on('gform_page_loaded', function (event, form_id, current_page) {
     // code to be trigger when next/previous page is loaded
-    
-    if(form_id == 3) {
-      if(current_page == 1) {
-        $('.bg-left').attr("src", surveyImages[0]);
-        $('.bg-right').attr("src", surveyImages[1]);
+
+    if (form_id == 3) {
+      if (current_page == 1) {
+        $('.bg-left').attr('src', surveyImages[0]);
+        $('.bg-right').attr('src', surveyImages[1]);
         //console.log(surveyImages[2]);
       }
-      if(current_page == 2) {
-        $('.bg-left').attr("src", surveyImages[2]);
-        $('.bg-right').attr("src", surveyImages[3]);
+      if (current_page == 2) {
+        $('.bg-left').attr('src', surveyImages[2]);
+        $('.bg-right').attr('src', surveyImages[3]);
         //console.log(surveyImages[2]);
       }
-      if(current_page == 3) {
-        $('.bg-left').attr("src", surveyImages[4]);
-        $('.bg-right').attr("src", surveyImages[5]);
-        $('<li class="survey-heading">Finding Customers</li>').insertBefore('.gchoice_3_23_1');
-        $('<li class="survey-heading">Engaging Customers</li>').insertBefore('.gchoice_3_23_8');
-        $('<li class="survey-heading">Operating Your Business</li>').insertBefore('.gchoice_3_23_13');
+      if (current_page == 3) {
+        $('.bg-left').attr('src', surveyImages[4]);
+        $('.bg-right').attr('src', surveyImages[5]);
+        $('<li class="survey-heading">Finding Customers</li>').insertBefore(
+          '.gchoice_3_23_1'
+        );
+        $('<li class="survey-heading">Engaging Customers</li>').insertBefore(
+          '.gchoice_3_23_8'
+        );
+        $(
+          '<li class="survey-heading">Operating Your Business</li>'
+        ).insertBefore('.gchoice_3_23_13');
         //console.log(surveyImages[2]);
       }
-      if(current_page == 4) {
-        $('.bg-left').attr("src", surveyImages[6]);
-        $('.bg-right').attr("src", surveyImages[7]);
+      if (current_page == 4) {
+        $('.bg-left').attr('src', surveyImages[6]);
+        $('.bg-right').attr('src', surveyImages[7]);
         //console.log(surveyImages[2]);
       }
-      if(current_page == 5) {
-        $('.bg-left').attr("src", surveyImages[8]);
-        $('.bg-right').attr("src", surveyImages[9]);
+      if (current_page == 5) {
+        $('.bg-left').attr('src', surveyImages[8]);
+        $('.bg-right').attr('src', surveyImages[9]);
         //console.log(surveyImages[2]);
       }
     }
@@ -80,13 +98,13 @@ $(document).ready(() => {
         slidesPerView: 2.3,
         centeredSlides: false,
       },
-      1024:  {
+      1024: {
         slidesPerView: 3,
         allowTouchMove: false,
         centeredSlides: false,
         spaceBetween: 32,
       },
-    }
+    },
   });
 
   const storySwiper = new Swiper('.story-slider', {
@@ -104,34 +122,49 @@ $(document).ready(() => {
         slidesPerView: 2.3,
         centeredSlides: false,
       },
-      1024:  {
+      1024: {
         slidesPerView: 3,
         allowTouchMove: false,
         centeredSlides: false,
         spaceBetween: 32,
       },
-    }
+    },
   });
 
-  $('#copy-link').on('click', function() {
+  $('#copy-link').on('click', function () {
     $('#copy-tooltip').show().delay(1500).fadeOut();
-    var $temp = $("<input>");
-    $("body").append($temp);
+    var $temp = $('<input>');
+    $('body').append($temp);
     $temp.val($('#copied').text()).select();
-    document.execCommand("copy");
+    document.execCommand('copy');
     $temp.remove();
   });
 
-  $('#resource-cat').on('change', function() {
-
+  $('#resource-cat').on('change', function () {
     var searchParams = new URLSearchParams(window.location.search);
 
     searchParams.set('con', this.value);
 
-    var url = location.protocol + '//' + location.host + location.pathname + '?' + searchParams.toString();
+    var url =
+      location.protocol +
+      '//' +
+      location.host +
+      location.pathname +
+      '?' +
+      searchParams.toString();
 
-    window.location.replace( url );
+    window.location.replace(url);
   });
-  
 
+  $('.wp-block-resources h3').each(function () {
+    var title = $(this).html();
+    var parent = $(this).closest('.wp-block-resources');
+    var link = parent.find('.mr-2');
+    var title_change =
+      'Learn More <span class="gtm_title" style="display: none">' +
+      title +
+      '</span>';
+
+    link.html(title_change);
+  });
 });
