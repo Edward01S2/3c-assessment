@@ -69,6 +69,7 @@
               <img class="w-auto h-8" src="{!! $item['logo']['url'] !!}" alt="">
             </div>
             <div class="pt-2">
+              @if($item['link'])
               <a href="{!! $item['link']['url'] !!}" target="_blank" class="flex items-center justify-center">
                 <span class="mr-2">{{ ($item['link']['title']) ? $item['link']['title'] : 'Learn More' }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
@@ -77,6 +78,7 @@
                     clip-rule="evenodd" />
                 </svg>
               </a>
+              @endif
             </div>
           </div>
         </div>
