@@ -170,14 +170,14 @@ class Resources extends Block
     }
 
     public function getContent() {
-        $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwg';
+        $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwgr';
         
             
         return $content;
     }
 
     public function getPosts() {
-        $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwg';
+        $content = (isset($_GET['con']) || !(empty($_GET['con']))) ? $_GET['con'] : 'gwgr';
         $level = (isset($_GET['lvl']) || !(empty($_GET['lvl']))) ? $_GET['lvl'] : '1';
 
         switch($content) {
@@ -185,8 +185,8 @@ class Resources extends Block
                 $content = 'sell-online';
                 break;
             }
-            case 'gwg' : {
-                $content = 'grow-with-google';
+            case 'gwgr' : {
+                $content = 'grow-with-google-resources';
                 break;
             }
             case 'rmc' : {

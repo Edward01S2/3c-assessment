@@ -16,7 +16,7 @@ add_action('gform_pre_submission_3', function($form) {
   if($q1 = rgpost('input_20')) {
     $q1gw = [1, 2, 6, 8];
     if(in_array($q1, $q1gw)) {
-      $content = 'gwg';
+      $content = 'gwgr';
     }
     if($q1 == '5') {
       $content = 'fo';
