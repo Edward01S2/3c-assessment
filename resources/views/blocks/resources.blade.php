@@ -9,7 +9,7 @@
               <option value="{!! $cat->slug !!}" <?php if($cat->slug == $content) echo ' selected="selected"'; ?>>{!! $cat->name !!}</option>
             @endif
           @endforeach --}}
-          <option value="gwgr" <?php if('gwgr' == $content) echo ' selected="selected"'; ?>>Grow with Google Resources</option>
+          <option value="gwgr" <?php if('gwgr' == $content) echo ' selected="selected"'; ?>>Grow with Google / General Resources</option>
           <option value="fo" <?php if('fo' == $content) echo ' selected="selected"'; ?>>Be Found Online</option>
           <option value="rmc" <?php if('rmc' == $content) echo ' selected="selected"'; ?>>Reach More Customers</option>
           <option value="so" <?php if('so' == $content) echo ' selected="selected"'; ?>>Sell Online</option>
